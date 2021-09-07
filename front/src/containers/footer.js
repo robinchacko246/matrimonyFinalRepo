@@ -2,7 +2,7 @@ import React from 'react';
 
 // import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-
+import { withRouter, NavLink } from "react-router-dom";
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
@@ -131,13 +131,13 @@ export default function Footer() {
                   
                     
                   <li key={item}>
-                 
-                    <Link href={"/"+ItemFn(item)} variant="subtitle1" color="textSecondary">
+                    {/* <NavLink to="/contactUs">Contact Us</NavLink> */}
+                    <NavLink to={"/"+ItemFn(item)} color="textSecondary">
                  
                   {
                     item
                   }
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
               </ul>

@@ -87,5 +87,10 @@ exports.router = (() => {
   userRouter
     .route("/profile/:user_id/list-profile")
     .get(userController.getUserListProfileDataFromId);
+
+
+  userRouter
+    .route("/update/:user_id/profile_details")
+    .post(userController.updateUserData);  
   return userRouter;
 })();

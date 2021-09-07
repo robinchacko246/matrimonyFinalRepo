@@ -476,7 +476,7 @@ module.exports = {
     try {
       var result = await pool.query({
         sql:
-          "SELECT id, username, firstname, lastname, gender, online, pop_score, sexual_orientation, city, profile_picture_url, bio, birthdate, geo_lat, geo_long, last_connexion, pop_max, tags FROM users limit 0,10",
+          "SELECT id, username, firstname, lastname, gender, online, pop_score, sexual_orientation, city, profile_picture_url, bio, birthdate, geo_lat, geo_long, last_connexion, pop_max, tags FROM users where profile_picture_url!='' limit 0,10  ",
       
       });
       if (result) return result;

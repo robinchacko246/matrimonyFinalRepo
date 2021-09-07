@@ -69,7 +69,7 @@ class HomeLogged extends Component {
               />
               {this.props.userConnectedData.id !== undefined && (
                 <div>
-                  <ModalUserEditProfileInfo />
+                  <ModalUserEditProfileInfo user_id={ this.state.userID}/>
                   <ModalUserEditProfilePictures />
                 </div>
               )}
@@ -103,7 +103,7 @@ class HomeLogged extends Component {
           )}
         </div>
 
-        {/* <Highlighted /> */}
+        <Highlighted />
         <WhatMakeSpecial />
 
         {/* <AboutUs /> */}

@@ -77,6 +77,7 @@ class UserCard extends Component {
   }
 
   handleLike = () => {
+    
     this._isMounted &&
       this.setState({
         likesProfile: true

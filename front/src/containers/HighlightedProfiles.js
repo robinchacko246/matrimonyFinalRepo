@@ -14,8 +14,7 @@ import { connect } from "react-redux";
 
 import UserCard from "../components/cards/UserCardForLoginPage";
 
-import ModalMatchAnim from "../components/modals/ModalMatchAnim";
-import ModalUserListFilter from "../components/modals/ModalUserListFilter";
+
 
 import HeartBroken from "../assets/heart-broken.gif";
 import HeartLoading from "../assets/heart-loading.gif";
@@ -56,16 +55,21 @@ class Highlighted extends Component
   <h2>Highlighted <span>Profiles</span></h2>
 
 
-  {/* <div> */}
 
   {console.log(this.state.userTab)}
 
   {this.state.isLoading ? (
-
+  <div className="row1">
+    <div className="posters">
     <this.userList
       value={this.state.userTab.slice(0, this.state.page)}
     />
+      </div>
+    
+    </div>
+   
   ) : (
+    
     <div className="userlist-loading">
       <img
         className="userlist-loading-img"
@@ -78,15 +82,19 @@ class Highlighted extends Component
 
 
 
-  <ModalUserListFilter filterDataToParent={this.handleFilterData} />
-  <ModalMatchAnim />
-  {/* </div> */}
+ 
 </div>
 </div>
 
 )
   }
   componentDidMount = async () => {
+   console.log("isssssssssssssssssssssssssssssssss",this.Auth.getConfirm()["id"]);
+    
+    this.setState({
+      userID: this.Auth.getConfirm()["id"]
+    });
+
     await Axios.post("/main/allProfiles", {
 
     })
@@ -111,7 +119,7 @@ class Highlighted extends Component
 
     if (this.Auth.loggedIn()) {
       ErrorToast.auth.userAlreadyLogged();
-      this.props.history.replace("/");
+      //this.props.history.replace("/");
     }
   }
   userList = props => { //test

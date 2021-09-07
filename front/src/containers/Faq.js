@@ -4,7 +4,7 @@ import "../styles/App.css";
 import NavBar from "../components/NavBar";
 import AccordianFn from '../components/AccordianFn';
 import Footer from "./footer";
-
+import Highlighted from "./HighlightedProfiles2";
 
 
 
@@ -54,6 +54,7 @@ export default function FadeMenu() {
         </div>
 
       </div>
+      <Highlighted/>
       <Footer />
 
     </div>

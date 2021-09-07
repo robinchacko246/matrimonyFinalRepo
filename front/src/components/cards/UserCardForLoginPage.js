@@ -82,8 +82,9 @@ class UserCard extends Component {
       this.setState({
         likesProfile: true
       });
+      
     ApiCall.user.createUserLike(this.props.intel.id, this.props.uid);
-    this.props.func(this.props.intel.id, "like");
+    //this.props.func(this.props.intel.id, "like");
   };
 
   handleDislike = () => {
@@ -92,7 +93,7 @@ class UserCard extends Component {
         likesProfile: false
       });
     ApiCall.user.deleteUserLike(this.props.intel.id, this.props.uid);
-    this.props.func(this.props.intel.id, "dislike");
+    //this.props.func(this.props.intel.id, "dislike");
   };
 
   handleLikeBack = () => {
@@ -101,7 +102,7 @@ class UserCard extends Component {
         likesProfile: true
       });
     ApiCall.user.createUserLike(this.props.intel.id, this.props.uid);
-    this.props.func(this.props.intel.id, "like_back");
+    //this.props.func(this.props.intel.id, "like_back");
   };
   calculateAge=(birthday)=>
   {
@@ -136,6 +137,7 @@ class UserCard extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="HighlightedProfilesView">
         <div className="card sticky-action">
@@ -163,11 +165,7 @@ class UserCard extends Component {
                   onClick={
                     this.props.pictures
                       ? e => this.handleDislike()
-                      : () => {
-                          alert(
-                            "You must login to perform this action"
-                          );
-                        }
+                      : e => this.handleDislike()
                   }
                 >
                   <DislikeButton />
@@ -178,11 +176,7 @@ class UserCard extends Component {
                   onClick={
                     this.props.pictures
                       ? e => this.handleLikeBack()
-                      : () => {
-                          alert(
-                            "You must login to perform this action"
-                          );
-                        }
+                      :  e => this.handleLikeBack()
                   }
                 >
                   <LikeBackButton />
@@ -193,11 +187,7 @@ class UserCard extends Component {
                   onClick={
                     this.props.pictures
                       ? e => this.handleLike()
-                      : () => {
-                          alert(
-                            "You must login to perform this action"
-                          );
-                        }
+                      : e => this.handleLike()
                   }
                 >
                   <LikeButton />

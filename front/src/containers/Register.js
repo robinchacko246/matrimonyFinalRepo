@@ -18,7 +18,7 @@ import { FcNightPortrait, FcCheckmark, FcLock } from 'react-icons/fc';
 import Footer from "./footer";
 import AboutUs from "./AboutUs";
 import WhatMakeSpecial from "./WhatMakeSpecial";
-import Highlighted from "./HighlightedProfiles";
+import Highlighted from "./HighlightedProfiles2";
 
 //
 

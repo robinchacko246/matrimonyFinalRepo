@@ -2064,3 +2064,37 @@ h1, .h1, h2, .h2 {
 .Highlighted h5 span {
   color: #17cdb6;
 }
+
+.row11
+{
+    margin-left:20px;
+    color: white;
+
+}
+
+.posters
+{
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
+}
+.smallPoster
+{
+    max-height: 100px;
+    margin-right: 30px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.textSmall{
+  
+}
+.input {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  outline-color: transparent;
+}

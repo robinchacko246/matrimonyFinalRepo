@@ -10,7 +10,7 @@ import { BackgroundRemove } from "../components/BackgroundRegister";
 import { BackgroundRemove as BackgroundRemoveLogin } from "../components/Background";
 import Footer from "./footer";
 
-import Highlighted from "./HighlightedProfiles";
+import Highlighted from "./HighlightedProfiles2";
 
 
 export default function Notfound() {
@@ -41,6 +41,7 @@ export default function Notfound() {
         </div>
 
       </div>
+      <Highlighted/>
       <Footer/>
       
     </div>
